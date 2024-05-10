@@ -161,7 +161,7 @@ function calcularNumerito() {
 
 // Función para manejar el evento de clic en el botón "Finalizar compra"
 document.getElementById("finalizar-compra").addEventListener("click", () => {
-    // Aquí va el código para mostrar la alerta de SweetAlert
+
     Swal.fire({
         title: '¡Gracias por tu compra!',
         text: '¡Esperamos verte de nuevo pronto!',
@@ -187,8 +187,8 @@ fetch('data/productos.json')
     return response.json();
   })
   .then(data => {
-    // Aquí puedes trabajar con los datos cargados, como mostrarlos en tu tienda en línea
-    console.log(data); // Solo para verificar en la consola que los datos se hayan cargado correctamente
+    
+    console.log(data); 
     
     // Iterar sobre el array de productos
     data.forEach(producto => {
@@ -208,7 +208,7 @@ fetch('data/productos.json')
         // Agregar un evento click al botón de agregar al carrito
         const botonAgregar = productoElemento.querySelector(".producto-btn");
         botonAgregar.addEventListener("click", () => {
-            // Aquí puedes agregar la lógica para agregar el producto al carrito
+        
             agregarAlCarrito(producto);
         });
 
