@@ -1,0 +1,20 @@
+[
+    {
+        "id": "Amigurumi1",
+        "titulo": "Rino",
+        "precio": 2000,
+        "descripcion": "Muñeco de Rino tejido a mano con lana suave."
+    },
+    {
+        "id": "Amigurumi2",
+        "titulo": "Jirafa",
+        "precio": 2000,
+        "descripcion": "Muñeco de Jirafa tejido a mano con lana de colores brillantes."
+    },
+    {
+        "id": "Amigurumi3",
+        "titulo": "Koala",
+        "precio": 2000,
+        "descripcion": "Muñeco de Koala tejido a mano con lana suave y esponjosa."
+    }
+] 

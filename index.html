@@ -14,7 +14,7 @@
             <div class="header-items">
                 <h1>Amigurumis</h1>
 
-                <a class="carrito-header"  href="./carrito.html">
+                <a class="carrito-header"  href="#">
                     🛒 <span id="numerito">0</span>
                 </a>
             </div>
@@ -29,18 +29,18 @@
         </section>
         <section class="container">
             <h2 class="titulo">Carrito</h2>
-            <div class="carrito">
-                <div id="carrito-vacio">
-                    <h4> Carrito está vacío </h4>
-                </div>
-                <div class="carrito-productos d-none" id="carrito-productos">
+            <div class="carrito" id="carrito">
                 
-                </div>
-                <div class="carrito-total">
-                    <h2>Total: <span id="carrito-total">$0</span></h2>
-                </div>
             </div>
-        </section>
+            <div class="carrito-total">
+                <h2>Total: <span id="carrito-total">$0</span></h2>
+                <button id="finalizar-compra">Finalizar compra</button>
+            </div>
+
+             <div class="carrito-vacio d-none" id="carrito-vacio">
+              <p>El carrito está vacío</p>
+            </div>
+         </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -49,6 +49,7 @@
     </footer>
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

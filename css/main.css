@@ -1,6 +1,8 @@
+/* Importar fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -32,11 +34,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Bricolage Grotesque", sans-serif;
 }
 
+/* Estilos del encabezado */
 .header {
-    background-color: #ff9ca8; /* Cambiado a un tono de rosa más oscuro */
+    background-color: #ff9ca8;
     color: var(--clr-white);
     padding-block: 1rem;
-    border-bottom: 2px solid var(--clr-white); /* Borde inferior blanco */
+    border-bottom: 2px solid var(--clr-white);
 }
 
 .header-items {
@@ -55,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--clr-white);
 }
 
+/* Estilos del carrito */
 .main {
     padding-block: 2rem;
 }
@@ -73,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .producto {
     background-color: var(--clr-gray);
-    padding: 2rem; /* Aumenta el padding para hacer las tarjetas más grandes */
+    padding: 2rem;
     border-radius: 1rem;
     color: var(--clr-black);
     display: flex;
@@ -81,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: .25rem;
     border: 2px solid var(--clr-gray);
     height: 100%;
-    /* Ajusta el tamaño de las tarjetas */
     width: 300px;
     height: 400px;
 }
@@ -98,6 +101,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .producto-img:hover {
     object-position: bottom right;
+}
+
+.producto-btn,
+#finalizar-compra {
+    border-radius: .75rem;
+    border: 0;
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    padding: .5rem;
+    margin-top: .5rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-accent);
+    transition: .2s;
+}
+
+.producto-btn:hover,
+#finalizar-compra:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .producto-btn {
@@ -118,8 +142,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
 .carrito-producto {
-    background-color: #c5c1c1; 
+    background-color: #c5c1c1;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -129,14 +154,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carrito-producto p {
-    margin-right: 1rem; 
+    margin-right: 1rem;
     font-weight: bold;
 }
 
 .carrito-producto .precio {
-    display: none; 
+    display: none;
 }
-
 
 .carrito-producto-btn {
     background-color: var(--clr-accent);
@@ -154,23 +178,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-
-.carrito-producto-btn:hover {
-    background-color: var(--clr-white);
-    color: var(--clr-black);
-    font-weight: bold; /* Hace que el texto de los botones sea más fuerte al pasar el mouse */
-}
-
-
+/* Estilos del pie de página */
 .footer {
-    background-color: #ff9ca8; 
-    color: var(--clr-white); 
+    background-color: #ff9ca8;
+    color: var(--clr-white);
     padding: 3rem 0;
     text-align: center;
 }
 
 .footer-text {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     font-weight: bolder;
-    color: var(--clr-black); 
+    color: var(--clr-black);
 }
