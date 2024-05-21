@@ -8,28 +8,6 @@ const numerito = document.querySelector("#numerito");
 // Inicialización del carrito
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-// Definición de productos
-const productos = [
-    {
-        id: "Amigurumi1",
-        titulo: "Rino",
-        precio: 2000,
-        img: "./img/rino.jpg",
-    },
-    {
-        id: "Amigurumi2",
-        titulo: "Jirafa",
-        precio: 2000,
-        img: "./img/jirafi.jpg",
-    },
-    {
-        id: "Amigurumi3",
-        titulo: "Koala",
-        precio: 2000,
-        img: "./img/koala.jpg",
-    }
-];
-
 // Función para crear un elemento de producto
 function crearProductoElemento(producto) {
     const div = document.createElement("div");
@@ -37,7 +15,8 @@ function crearProductoElemento(producto) {
     div.innerHTML = `
         <img class="producto-img" src="${producto.img}" alt="${producto.titulo}">
         <h3>${producto.titulo}</h3>
-        <p>$${producto.precio}</p>
+        <p>Precio: $${producto.precio}</p>
+        <p>${producto.descripcion}</p>
         <button class="producto-btn" data-id="${producto.id}">Agregar al carrito</button>
     `;
 
@@ -124,7 +103,6 @@ function agregarAlCarrito(producto) {
     }).showToast();
 }
 
-
 // Función para borrar un producto del carrito
 function borrarDelCarrito(producto) {
     carrito = carrito.filter(item => item.id !== producto.id);
@@ -170,15 +148,6 @@ document.getElementById("finalizar-compra").addEventListener("click", () => {
     });
 });
 
-
-// Inicialización de la página
-productos.forEach((producto) => {
-    contenedorProductos.appendChild(crearProductoElemento(producto));
-});
-
-actualizarCarrito();
-
-
 fetch('data/productos.json')
   .then(response => {
     if (!response.ok) {
@@ -196,16 +165,17 @@ fetch('data/productos.json')
         const productoElemento = document.createElement("div");
         productoElemento.classList.add("producto");
 
-        // Construir el contenido HTML del producto
+        //  contenido HTML del producto
         productoElemento.innerHTML = `
-            <img class="producto-img" src="${producto.img}" alt="${producto.titulo}">
-            <h3>${producto.titulo}</h3>
-            <p>Precio: $${producto.precio}</p>
-            <p>${producto.descripcion}</p>
-            <button class="producto-btn" data-id="${producto.id}">Agregar al carrito</button>
-        `;
+        <img class="producto-img" src="../img/${producto.id.toLowerCase()}.jpg" alt="${producto.titulo}">
+        <h3>${producto.titulo}</h3>
+        <p>Precio: $${producto.precio}</p>
+        <p>${producto.descripcion}</p>
+        <button class="producto-btn" data-id="${producto.id}">Agregar al carrito</button>
+    `;
+    
 
-        // Agregar un evento click al botón de agregar al carrito
+        //  evento click al botón de agregar al carrito
         const botonAgregar = productoElemento.querySelector(".producto-btn");
         botonAgregar.addEventListener("click", () => {
         
@@ -219,6 +189,3 @@ fetch('data/productos.json')
   .catch(error => {
     console.error('Error al cargar los datos:', error);
   });
-
-
-
